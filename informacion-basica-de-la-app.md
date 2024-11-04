@@ -5,6 +5,7 @@ VendIA, GanaGana, Prezzio
 ### Descripción básica de la aplicación 
 Esta aplicación trata de la compra/venta de artículos que estén en buen estado para que otras personas le den el uso que se merece. 
 Contiene cualquier tipo de productos, de todos los sectores, cada sector va a tener su apartado, donde vamos a encontrar filtros personalizados para ello.
+Sube, busca, encuentra
 
 #### Principales sectores
 Moda --> Relacionado con ropa de todo tipo, desde ropa más juvenil hasta la más elegante
@@ -39,3 +40,6 @@ Dentro de esta pantalla te aparecerá diferentes preguntas sobre las especificac
 Y tendrás un apartado para subir fotos del producto que será obligatoria 
 
 --------
+
+
+apuntes-Intent.pdf en la pg 5 tenemos un ejemplo de como llamar a una pg web 
