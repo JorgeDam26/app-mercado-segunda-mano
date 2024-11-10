@@ -43,9 +43,8 @@ Y tendrás un apartado para subir fotos del producto que será obligatoria
 ### Pantalla de la cesta
 Pantalla donde salen todos productos que has añadido y que deseas comprar.
 Aparecerá una lista con todos los productos que hayas añadido a la cesta y sus especificaciones
-Aparecerá la suma total del precio 
+Aparecerá la suma total del precio.
 Aparecerá un botón que nos llevará a una ventana de pago, para llevar acabo el pago del producto
-
 
 
 apuntes-Intent.pdf en la pg 5 tenemos un ejemplo de como llamar a una pg web 
