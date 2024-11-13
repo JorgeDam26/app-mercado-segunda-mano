@@ -1,5 +1,5 @@
 ### Nombre de la aplicación
-VendIA, GanaGana, Prezzio
+Vendia, GanaGana, Prezzio
 
 ------------------
 ### Descripción básica de la aplicación 
@@ -35,16 +35,7 @@ En la pantalla de la tecnología tendremos un filtro personalizado donde dividir
 Te saldrá un apartado de recomendados productos muy parecidos al que estas inspeccionando
 
 ----
-### Pantalla subir producto
-Dentro de esta pantalla te aparecerá diferentes preguntas sobre las especificaciones de tu producto para que la aplicación lo coloque los productos según su tipo, marca...
-Y tendrás un apartado para subir fotos del producto que será obligatoria 
 
---------
-### Pantalla de la cesta
-Pantalla donde salen todos productos que has añadido y que deseas comprar.
-Aparecerá una lista con todos los productos que hayas añadido a la cesta y sus especificaciones
-Aparecerá la suma total del precio.
-Aparecerá un botón que nos llevará a una ventana de pago, para llevar acabo el pago del producto
-
-
+DISPOSITIVO EN EL QUE SE HA PROBADO PARA QUE SANTA LO PRUEBE 
+PASARLE EL LINK DEL REPOSITORIO DE LA APLICACION 
 apuntes-Intent.pdf en la pg 5 tenemos un ejemplo de como llamar a una pg web 
