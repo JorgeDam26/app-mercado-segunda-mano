@@ -5,6 +5,7 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.appsegundamano.databinding.ActivityPantallaPrincipalBinding
@@ -55,6 +56,11 @@ class PantallaPrincipal : AppCompatActivity() {
         }
 
         setSupportActionBar(toolbar)
+
+        //Autocomplete text view
+        val products = resources.getStringArray(R.array.pantallas)
+        val adapter: ArrayAdapter<String> = ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, products)
+        binding.autocompleteTextView.setAdapter(adapter)
     }
 
 
@@ -66,10 +72,6 @@ class PantallaPrincipal : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
             R.id.menu_menu -> {
-                true
-            }
-
-            R.id.menu_buscar -> {
                 true
             }
 

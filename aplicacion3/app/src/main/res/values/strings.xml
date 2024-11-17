@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Segunda Mano</string>
+
+    <string-array name="pantallas">
+        <item>Popular</item>
+        <item>Moda</item>
+        <item>Deportes</item>
+        <item>Tecnología</item>
+    </string-array>
 </resources>

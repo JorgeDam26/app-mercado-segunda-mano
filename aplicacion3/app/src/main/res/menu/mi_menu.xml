@@ -2,12 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menu_buscar"
-        android:title="menu_buscar"
-        android:icon="@drawable/vs_buscar"
-        app:showAsAction="ifRoom|withText"
-    />
-
     <item android:id="@+id/menu_menu"
         android:title="menu_info"
         android:icon="@drawable/vs_menu"
