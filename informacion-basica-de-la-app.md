@@ -39,3 +39,27 @@ Te saldrá un apartado de recomendados productos muy parecidos al que estas insp
 DISPOSITIVO EN EL QUE SE HA PROBADO PARA QUE SANTA LO PRUEBE 
 PASARLE EL LINK DEL REPOSITORIO DE LA APLICACION 
 apuntes-Intent.pdf en la pg 5 tenemos un ejemplo de como llamar a una pg web 
+
+
+
+# REQUISITOS
+- Se debe entregar un documento donde se especifique el nombre y descripción del proyecto a realizar, y describas la funcionalidad completa de tu aplicación, indicando por cada pantalla lo que hace y la clase donde la implementas. El código debe estar comentado, probado y sin errores. Indicar sobre que dispositivo se ha probado
+- **Entregar el proyecto completo comprimido** 
+- Opcional: Darme acceso a GitHub (usuario: sarevalo25) , o poner acceso al repositorio que contiene el proyecto
+- Creación de un interfaz con XML con el layout ConstraintLayout y controles vistos en clase (al menos uno de los controles debe ser AutoCompleteTextView o Spinner
+- Crear al menos 3 Activity         
+    - Usar binding para acceder a los controles definidos en los archivos de diseño XML. 
+    - Llamadas entre pantallas/fragment pasando datos
+    - En un activity como mínimo se deben usar Fragment cargados dinámicamente (usa ViewPager2 para crear solapas deslizantes)
+- Debe crearse un menú, que tenga al menos las siguientes opciones :
+    - 1.Ventana de Preferencias funcional 
+    - 2.Acceso a página web 
+    - 3.Acerca de (recogiendo un texto de un archivo de recursos) 
+
+- La aplicación debe ser multidioma y tomar el idioma de los ajustes del teléfono
+- Uso de Logcat y Toast cuando sea necesario
+- La aplicación se debe ver bien en vertical y en horizontal
+
+
+Paleta de colores utilizada
+https://color.adobe.com/es/search?q=azules&t=term
