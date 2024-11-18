@@ -63,7 +63,7 @@ class PantallaPrincipal : AppCompatActivity() {
         val products = resources.getStringArray(R.array.pantallas)
         val adapter: ArrayAdapter<String> = ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, products)
         binding.autocompleteTextView.setAdapter(adapter)
-        
+
         binding.autocompleteTextView.setOnItemClickListener { parent, view, position, id ->
             val item = parent.getItemAtPosition(position) as String
 
@@ -72,7 +72,7 @@ class PantallaPrincipal : AppCompatActivity() {
             intent.putExtra("item_seleccionado", item)
             startActivity(intent)
 
-           llevarAPantallaSeleccionada()
+            llevarAPantallaSeleccionada()
 
         }
 
@@ -123,4 +123,5 @@ class PantallaPrincipal : AppCompatActivity() {
             }
         }
     }
+
 }
