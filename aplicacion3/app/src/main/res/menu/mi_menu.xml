@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Preferencias"
+        android:id="@+id/preferencias"
+        app:showAsAction="never"/>
 
-    <item android:id="@+id/menu_menu"
-        android:title="menu_info"
-        android:icon="@drawable/vs_menu"
-        app:showAsAction="never"
-    />
+    <item android:title="Acceso pagina web"
+        android:id="@+id/acceso_pg_web"
+        app:showAsAction="never"/>
 
+    <item android:title="Acerca De"
+        android:id="@+id/acerca_de"
+        app:showAsAction="never"/>
 </menu>

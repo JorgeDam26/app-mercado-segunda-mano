@@ -6,7 +6,9 @@ import android.content.res.Resources
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.appsegundamano.databinding.ActivityPantallaPrincipalBinding
@@ -28,6 +30,8 @@ class PantallaPrincipal : AppCompatActivity() {
         binding = ActivityPantallaPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        //Toolbar
         val toolbar: MaterialToolbar = binding.cabezaApp
         setSupportActionBar(toolbar)
 
@@ -76,35 +80,38 @@ class PantallaPrincipal : AppCompatActivity() {
 
         }
 
+
+
     }
 
     private fun llevarAPantallaSeleccionada(){
         val pantallaSeleccionada = intent.getStringExtra("item_seleccionado")
         when (pantallaSeleccionada) {
             "Popular" -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.tabLayout, FragmentPopular())
-                    .commit()
+                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
+                toast.show()
+
             }
             "Moda" -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.tabLayout, FragmentModa())
-                    .commit()
+                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
+                toast.show()
+
             }
             "Deportes" -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.tabLayout, FragmentDeportes())
-                    .commit()
+                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
+                toast.show()
+
             }
             "Tecnología" -> {
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.tabLayout, FragmentTecnologia())
-                    .commit()
+                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
+                toast.show()
+
             }
             else -> {
                 throw Resources.NotFoundException("Positions not found")
             }
         }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -114,14 +121,22 @@ class PantallaPrincipal : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            R.id.menu_menu -> {
+            R.id.preferencias -> {
                 true
             }
-
+            R.id.acceso_pg_web -> {
+                true
+            }
+            R.id.acerca_de -> {
+                startActivity(Intent(this, AcercaDe2::class.java))
+                true
+            }
             else -> {
                 throw Resources.NotFoundException("Positions not found")
             }
         }
     }
+
+
 
 }
