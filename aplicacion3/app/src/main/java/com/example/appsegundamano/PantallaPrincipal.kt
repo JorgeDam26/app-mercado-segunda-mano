@@ -3,6 +3,7 @@ package com.example.appsegundamano
 
 import android.content.Intent
 import android.content.res.Resources
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -29,7 +30,6 @@ class PantallaPrincipal : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPantallaPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
 
         //Toolbar
         val toolbar: MaterialToolbar = binding.cabezaApp
@@ -80,8 +80,6 @@ class PantallaPrincipal : AppCompatActivity() {
 
         }
 
-
-
     }
 
     private fun llevarAPantallaSeleccionada(){
@@ -121,10 +119,14 @@ class PantallaPrincipal : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            R.id.preferencias -> {
+            /*R.id.preferencias -> {
+                startActivity(Intent(this, PreferenciasFragment::class.java))
                 true
-            }
+            }*/
             R.id.acceso_pg_web -> {
+                val webpage:Uri = Uri.parse("https://es.wallapop.com/")
+                val webIntent:Intent = Intent(Intent.ACTION_VIEW, webpage)
+                startActivity(webIntent)
                 true
             }
             R.id.acerca_de -> {
