@@ -119,10 +119,10 @@ class PantallaPrincipal : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
-            /*R.id.preferencias -> {
-                startActivity(Intent(this, PreferenciasFragment::class.java))
+            R.id.preferencias -> {
+                startActivity(Intent(this, preferencias::class.java))
                 true
-            }*/
+            }
             R.id.acceso_pg_web -> {
                 val webpage:Uri = Uri.parse("https://es.wallapop.com/")
                 val webIntent:Intent = Intent(Intent.ACTION_VIEW, webpage)
