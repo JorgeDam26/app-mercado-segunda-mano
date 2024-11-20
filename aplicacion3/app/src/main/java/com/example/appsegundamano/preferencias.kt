@@ -12,6 +12,7 @@ import com.example.appsegundamano.databinding.ActivityPreferenciasBinding
 
 class preferencias : AppCompatActivity() {
 
+    //binding
     private lateinit var binding: ActivityPreferenciasBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,7 @@ class preferencias : AppCompatActivity() {
             insets
         }
 
+        //Funcionalidad del boton atras, te lleva a la pantalla principal
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, PantallaPrincipal::class.java)
             startActivity(intent)

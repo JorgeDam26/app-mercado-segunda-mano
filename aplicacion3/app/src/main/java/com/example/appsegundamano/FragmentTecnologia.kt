@@ -18,6 +18,7 @@ class FragmentTecnologia : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        //Creamos la vista en el fragment
         binding = FragmentTecnologiaBinding.inflate(inflater, container, false)
         val view = binding.root
         return view

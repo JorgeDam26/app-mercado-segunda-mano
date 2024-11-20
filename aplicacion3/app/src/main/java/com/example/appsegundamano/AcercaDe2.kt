@@ -11,12 +11,15 @@ import com.example.appsegundamano.databinding.ActivityAcercaDe2Binding
 
 class AcercaDe2 : AppCompatActivity() {
 
+    //Creamos el binging
     private lateinit var binding: ActivityAcercaDe2Binding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = ActivityAcercaDe2Binding.inflate(layoutInflater)
         setContentView(binding.root)
+
         enableEdgeToEdge()
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -24,6 +27,7 @@ class AcercaDe2 : AppCompatActivity() {
             insets
         }
 
+        //Al presionar el boton de atrás te lleva a la pantalla principal
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, PantallaPrincipal::class.java)
             startActivity(intent)

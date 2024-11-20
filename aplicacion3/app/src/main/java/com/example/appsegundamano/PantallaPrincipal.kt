@@ -19,11 +19,14 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class PantallaPrincipal : AppCompatActivity() {
 
+    //binding
     private lateinit var binding: ActivityPantallaPrincipalBinding
 
+    //tabLayout --> Para manejar las pantallas
     private lateinit var tabLayout: TabLayout
-    private lateinit var viewPager: ViewPager2
 
+    //view pager2 --> donde se van a mostrar las pantallas
+    private lateinit var viewPager: ViewPager2
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,13 +34,14 @@ class PantallaPrincipal : AppCompatActivity() {
         binding = ActivityPantallaPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        //Toolbar
+        //inicio la toolbar
         val toolbar: MaterialToolbar = binding.cabezaApp
         setSupportActionBar(toolbar)
 
         tabLayout = binding.tabLayout
         viewPager = binding.viewPager
 
+        //Configuramos un ViewPager2 con los diferentes items
         viewPager.adapter = PagerAdapter(this)
         TabLayoutMediator(tabLayout, viewPager) { tab, index ->
             tab.text = when (index) {
@@ -65,9 +69,12 @@ class PantallaPrincipal : AppCompatActivity() {
 
         //Autocomplete text view
         val products = resources.getStringArray(R.array.pantallas)
+        //Array con las sugerencias del arrayAdapter
         val adapter: ArrayAdapter<String> = ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, products)
         binding.autocompleteTextView.setAdapter(adapter)
 
+
+        //Listener del autocomplete text view
         binding.autocompleteTextView.setOnItemClickListener { parent, view, position, id ->
             val item = parent.getItemAtPosition(position) as String
 
@@ -76,63 +83,38 @@ class PantallaPrincipal : AppCompatActivity() {
             intent.putExtra("item_seleccionado", item)
             startActivity(intent)
 
-            llevarAPantallaSeleccionada()
-
         }
 
     }
 
-    private fun llevarAPantallaSeleccionada(){
-        val pantallaSeleccionada = intent.getStringExtra("item_seleccionado")
-        when (pantallaSeleccionada) {
-            "Popular" -> {
-                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
-                toast.show()
-
-            }
-            "Moda" -> {
-                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
-                toast.show()
-
-            }
-            "Deportes" -> {
-                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
-                toast.show()
-
-            }
-            "Tecnología" -> {
-                val toast = Toast.makeText(this, "Yendo a pantalla popular", Toast.LENGTH_SHORT)
-                toast.show()
-
-            }
-            else -> {
-                throw Resources.NotFoundException("Positions not found")
-            }
-        }
-
-    }
-
+    //Funcion para crear el menu
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.mi_menu, menu)
         return true
     }
 
+    //Funcion que da funcionalidad al menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
+            //Da funcionalidad a preferencias
             R.id.preferencias -> {
+                //Te lleva al fragment de preferencias para cambiar el tema de fondo de color
                 startActivity(Intent(this, preferencias::class.java))
                 true
             }
+            //Te lleva a una pagina web
             R.id.acceso_pg_web -> {
                 val webpage:Uri = Uri.parse("https://es.wallapop.com/")
                 val webIntent:Intent = Intent(Intent.ACTION_VIEW, webpage)
                 startActivity(webIntent)
                 true
             }
+            //Te lleva al activity AcercaDe2, simplemenete es una informacion sobre la aplicacion
             R.id.acerca_de -> {
                 startActivity(Intent(this, AcercaDe2::class.java))
                 true
             }
+            //Controlamos por si hubiera algún error
             else -> {
                 throw Resources.NotFoundException("Positions not found")
             }

@@ -17,6 +17,7 @@ class FragmentModa : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        //Creamos la vista en el fragment
         binding = FragmentModaBinding.inflate(inflater, container, false)
         val view = binding.root
         return view

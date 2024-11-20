@@ -19,6 +19,7 @@ class FragmentPopular : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        //Creamos la vista en el fragment
         binding = FragmentPopularBinding.inflate(inflater, container, false)
         val view = binding.root
         return view

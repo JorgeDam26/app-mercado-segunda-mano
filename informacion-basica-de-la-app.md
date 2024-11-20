@@ -1,50 +1,56 @@
 ### Nombre de la aplicación
-Vendia, GanaGana, Prezzio
+Vendia
+
+**Slogan:** Sube, busca, compra, vende.
 
 ------------------
 ### Descripción básica de la aplicación 
 Esta aplicación trata de la compra/venta de artículos que estén en buen estado para que otras personas le den el uso que se merece. 
-Contiene cualquier tipo de productos, de todos los sectores, cada sector va a tener su apartado, donde vamos a encontrar filtros personalizados para ello.
-Sube, busca, encuentra
-
-#### Principales sectores
-Moda --> Relacionado con ropa de todo tipo, desde ropa más juvenil hasta la más elegante
-Deportes --> Cualquier tipo de prendas y accesorios deportivos
-Tecnología --> Cualquier tipo de tecnología desde móviles, televisiones, ordenadores, todo tipo de periféricos
+En un futuro contendrá cualquier tipo de productos, de momento, en un primer desarrollo tiene una ventana pantalla popular, de moda, de deporte y de tecnología. Todas estas pantallas vienen explicadas más adelante
 
 ----------
 ### Pantalla principal
 En la pantalla principal aparecerán los productos más populares de las ultimas 24H - 48H con todos los sectores mezclados. 
-Tendremos una opción de favoritos donde se guardarán los productos que hayamos asignado como favoritos por cualquier motivo
-Habrá una opción para subir el producto donde se abrirá otra pantalla para ello con las especificaciones necesarias para que aparezca en su grupo correcto
+
+- Contiene en primer lugar una toolbar donde encontramos el nombre de la aplicación, el slogan y a la derecha 3 puntos colocados en columna, esos puntos tienen la funcionalidad del menú (clica en ellos para que te aparezca el desplegable con las opciones del menú). La exiplicación más específica del menú continua debajo de la foto
+![[Pasted image 20241120221211.png]]
+
+Al ejecutar:
+![[Pasted image 20241120223447.png]]
 
 ------------
-### Pantalla moda
-En la pantalla de moda tendremos un filtro personalizado donde ya dividiremos la ropa por camisetas, jerséis, sudaderas con capucha, sudaderas sin capucha, chándal, vaqueros, chinos, zapatillas... 
-Dentro de ellos tendrán filtros mas específicos de marca de ropa, tipo, color... 
-Te saldrá un apartado de recomendados productos muy parecidos al que estas inspeccionando
+### Pantalla preferencias de la aplicación
+Esta es la primera opción que aparece en el menú de preferencias. Contiene un setting fragment en el medio para que la opcion salga en el medio y no arriba o abajo, simplemente por estetica y un botón "Atras" que te lleva a la pantalla principal.
+![[Pasted image 20241120222423.png]]
 
-------------------
-### Pantalla deportes
-En la pantalla de deportes tendremos un filtro personalizado donde dividiremos los artículos en marcas y dentro de esas marcas habrá otros filtros para especificar si quieres camisetas, pantalones, zapatillas, accesorios...
-Te saldrá un apartado de recomendados productos muy parecidos al que estas inspeccionando
+Al ejecutar aparece la opcion de cambiar el tema de color ya creada, al desactivarla está el modo claro y al activarla está en modo oscuro
+![[Pasted image 20241120223412.png]]
 
---------
-### Pantalla tecnología
-En la pantalla de la tecnología tendremos un filtro personalizado donde dividiremos los artículos por marcas y dentro de cada marca tendremos diferentes especificaciones como teclados, monitores, ordenadores, portatiles... 
-Te saldrá un apartado de recomendados productos muy parecidos al que estas inspeccionando
+![[Pasted image 20241120223026.png]] 
+![[Pasted image 20241120223101.png]]
+
+Añado a la información anterior que al cambair el modo oscuro/claro aparece un toast indicandolo
 
 ----
+### Funcionalidad acceso a pagiona web
+Esta es la segunda funcionalidad del menú, simplemente te lleva a la pagina web de wallapop (esta aplicación está inspirada en wallapop por eso he decidido ponerlo)
+![[Pasted image 20241120223526.png]]
 
-DISPOSITIVO EN EL QUE SE HA PROBADO PARA QUE SANTA LO PRUEBE 
-PASARLE EL LINK DEL REPOSITORIO DE LA APLICACION 
-apuntes-Intent.pdf en la pg 5 tenemos un ejemplo de como llamar a una pg web 
+---
+### Funcionalidad Acerca de
+Simplemente es una pesataña que hace una breve explicación de lo que hace la aplicacion y con un boton de atrás que vuelve a la pestaña inicial
+![[Pasted image 20241120223940.png]]
 
+---
+### Pantalla moda
+Una vez explicada la toolbar con sus 3 funciones del menú, toca explicar la segunda parte de la aplicacion el tablayout y lo que va a componer el 80% de la aplicación puesto que nos va a permitir ver los diferentes tipos de productos divididos por las secciones moda, deportes y tecnología
+![[Pasted image 20241120224720.png]]
+![[Pasted image 20241120224806.png]]
+![[Pasted image 20241120224838.png]]
 
-
-# REQUISITOS
-- Debe crearse un menú, que tenga al menos las siguientes opciones :
-    - 1.Ventana de Preferencias funcional 
-    - 2.Acceso a página web 
-    - 3.Acerca de (recogiendo un texto de un archivo de recursos)
-- Uso de Logcat y Toast cuando sea necesario
+---
+Con esto termina la explicación de la aplicacion otros datos necesarios son:
+Móvil uilizado: Medium Phone API 35
+Repositorio: https://github.com/Jootgitoo/app-mercado-segunda-mano
+En el encontrarás 3 carpetas con el nombre de aplicación, la que tienes que utilizar es aplicación 3 que es la que tiene los ultimos comits y la que funcione.
+En informacion basica de la app encontraras esta especie de readMe.pdf donde encontrarás la explicación de la aplicación

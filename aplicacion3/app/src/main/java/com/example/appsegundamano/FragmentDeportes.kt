@@ -11,6 +11,7 @@ import com.example.appsegundamano.databinding.FragmentModaBinding
 
 class FragmentDeportes : Fragment() {
 
+    //Creamos el binding
     private lateinit var binding: FragmentDeportesBinding
 
     override fun onCreateView(
@@ -18,6 +19,7 @@ class FragmentDeportes : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
+        //Creamos la vista en el fragment
         binding = FragmentDeportesBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
