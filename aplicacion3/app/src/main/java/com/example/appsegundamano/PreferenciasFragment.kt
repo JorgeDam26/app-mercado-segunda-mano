@@ -44,6 +44,7 @@ class PreferenciasFragment : PreferenceFragmentCompat(), SharedPreferences.OnSha
             Toast.makeText(requireContext(), "Cambiando a modo claro", Toast.LENGTH_SHORT).show()
 
         }
+
     }
 
 }
