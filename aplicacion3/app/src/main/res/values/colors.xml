@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Colores toolbar-->
     <color name="azulTbPantallaPrincipal">#88A2BF</color>
     <color name="azulTbFragment">#2D3640</color>
+
+    <!-- Colores tema claro-->
+    <color name="colorFondoTemaClaro">#E0D5BA</color>
+    <color name="colorLetrasTemaClaro">#468EE0</color>
+
+    <!-- Colores tema oscuro-->
+    <color name="colorFondoTemaOscuro">#10454F</color>
+    <color name="colorLetrasTemaOscuro">#BDE038</color>
 </resources>
