@@ -116,7 +116,7 @@ class PantallaPrincipal : AppCompatActivity() {
             }
             //Controlamos por si hubiera algún error
             else -> {
-                throw Resources.NotFoundException("Positions not found")
+                throw Resources.NotFoundException("Posicion no encontrada")
             }
         }
     }

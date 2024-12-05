@@ -4,6 +4,7 @@ import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat.recreate
 import androidx.preference.PreferenceFragmentCompat
 
 class PreferenciasFragment : PreferenceFragmentCompat(), SharedPreferences.OnSharedPreferenceChangeListener {
@@ -44,6 +45,7 @@ class PreferenciasFragment : PreferenceFragmentCompat(), SharedPreferences.OnSha
             Toast.makeText(requireContext(), "Cambiando a modo claro", Toast.LENGTH_SHORT).show()
 
         }
+        requireActivity().recreate()
 
     }
 
