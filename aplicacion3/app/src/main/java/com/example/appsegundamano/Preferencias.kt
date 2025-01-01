@@ -6,11 +6,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.preference.PreferenceManager
-import com.example.appsegundamano.databinding.ActivityAcercaDe2Binding
 import com.example.appsegundamano.databinding.ActivityPreferenciasBinding
 
-class preferencias : AppCompatActivity() {
+class Preferencias : AppCompatActivity() {
 
     //binding
     private lateinit var binding: ActivityPreferenciasBinding

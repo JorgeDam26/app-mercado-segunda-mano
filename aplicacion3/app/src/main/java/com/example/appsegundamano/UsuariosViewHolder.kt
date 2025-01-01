@@ -1,0 +1,15 @@
+package com.example.appsegundamano
+
+import android.view.View
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.appsegundamano.databinding.ActivityItemUsuarioBinding
+
+
+class UsuariosViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+    val binding = ActivityItemUsuarioBinding.bind(itemView)
+
+    val textView: TextView = binding.txUsuarios
+
+}

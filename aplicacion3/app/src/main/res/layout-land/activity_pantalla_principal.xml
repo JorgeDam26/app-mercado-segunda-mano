@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,80 +10,67 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/cabezaApp"
-        android:layout_width="732dp"
-        android:layout_height="69dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:background="@color/azulTbPantallaPrincipal"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:subtitle="Sube, compra, vende"
         app:title="VENDIA" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        android:layout_width="728dp"
-        android:layout_height="51dp"
-        android:contentDescription="Tab layout"
-        app:layout_constraintBottom_toTopOf="@+id/autocompleteTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/cabezaApp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- <com.google.android.material.tabs.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tbPopular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Popular"
-            tools:ignore="HardcodedText" />
+            android:text="Popular" />
 
-       <com.google.android.material.tabs.TabItem
+        <com.google.android.material.tabs.TabItem
             android:id="@+id/tbModa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moda"
-            tools:ignore="HardcodedText" />
+            android:text="Moda" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tolBarDeportes"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deportes"
-            tools:ignore="HardcodedText" />
+            android:text="Deportes" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tbTecnologia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tecnología"
-            tools:ignore="HardcodedText" /> -->
+            android:text="Tecnología" />
     </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="730dp"
-        android:layout_height="237dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <AutoCompleteTextView
         android:id="@+id/autocompleteTextView"
-        android:layout_width="356dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="187dp"
-        android:layout_marginEnd="188dp"
-        android:completionHint="A que pantalla desea ir"
-        android:completionThreshold="1"
-        android:dropDownHeight="match_parent"
-        android:hint="A que pantalla desea ir"
-        app:layout_constraintBottom_toTopOf="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="A qué pantalla desea ir"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5" />
 
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/autocompleteTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

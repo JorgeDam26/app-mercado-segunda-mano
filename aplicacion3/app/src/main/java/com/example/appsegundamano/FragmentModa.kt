@@ -12,10 +12,7 @@ class FragmentModa : Fragment() {
 
     private lateinit var binding: FragmentModaBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         //Creamos la vista en el fragment
         binding = FragmentModaBinding.inflate(inflater, container, false)

@@ -1,6 +1,8 @@
-<resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Segunda Mano</string>
-
+    
+    <string name="eslogan"></string>
 
     <string-array name="pantallas">
         <item>Popular</item>
@@ -26,5 +28,7 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+
 
 </resources>

@@ -1,15 +1,14 @@
 package com.example.appsegundamano
 
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.Resources
 import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.example.appsegundamano.databinding.ActivityPantallaPrincipalBinding
@@ -29,6 +28,7 @@ class PantallaPrincipal : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
 
 
+    @SuppressLint("CommitTransaction")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPantallaPrincipalBinding.inflate(layoutInflater)
@@ -62,7 +62,7 @@ class PantallaPrincipal : AppCompatActivity() {
                 }
 
                 else -> {
-                    throw Resources.NotFoundException("Positions not found")
+                    throw Resources.NotFoundException("Seleccione una posicion correcta")
                 }
             }
         }.attach()
@@ -70,20 +70,36 @@ class PantallaPrincipal : AppCompatActivity() {
         //Autocomplete text view
         val products = resources.getStringArray(R.array.pantallas)
         //Array con las sugerencias del arrayAdapter
-        val adapter: ArrayAdapter<String> = ArrayAdapter<String>( this, android.R.layout.simple_list_item_1, products)
+        val adapter: ArrayAdapter<String> = ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, products)
         binding.autocompleteTextView.setAdapter(adapter)
 
 
         //Listener del autocomplete text view
         binding.autocompleteTextView.setOnItemClickListener { parent, view, position, id ->
-            val item = parent.getItemAtPosition(position) as String
+            val pantallaAIr = parent.getItemAtPosition(position) as String
 
-            //Inica la actividad
-            val intent = Intent(this, PantallaPrincipal::class.java)
-            intent.putExtra("item_seleccionado", item)
-            startActivity(intent)
+            val fragmentTransaction = supportFragmentManager.beginTransaction()
+
+            when (pantallaAIr){
+                "Popular" -> {
+                    val intent = Intent(this, PantallaPrincipal::class.java)
+                    intent.putExtra("item_seleccionado", pantallaAIr)
+                    startActivity(intent)
+                }
+                "Moda" -> {
+                    fragmentTransaction.replace(R.id.viewPager, FragmentModa())
+                }
+                "Deportes" -> {
+                    fragmentTransaction.replace(R.id.viewPager, FragmentDeportes())
+                }
+                "Tecnología" -> {
+                    fragmentTransaction.replace(R.id.viewPager, FragmentTecnologia())
+                }
+            }
 
         }
+
+
 
     }
 
@@ -99,7 +115,7 @@ class PantallaPrincipal : AppCompatActivity() {
             //Da funcionalidad a preferencias
             R.id.preferencias -> {
                 //Te lleva al fragment de preferencias para cambiar el tema de fondo de color
-                startActivity(Intent(this, preferencias::class.java))
+                startActivity(Intent(this, Preferencias::class.java))
                 true
             }
             //Te lleva a una pagina web
