@@ -2,9 +2,11 @@ package com.example.appsegundamano
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -26,11 +28,7 @@ class Login : AppCompatActivity() {
         initRecyclerView()
 
         binding.btAutentificar.setOnClickListener(){
-            if ( binding.txtPassword.text.toString() == "Admin123"){
-                startActivity(Intent(this, PantallaPrincipal::class.java))
-            } else {
-                Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
-            }
+            showSimpleAlertDialog()
         }
 
     }
@@ -43,6 +41,22 @@ class Login : AppCompatActivity() {
 
         val decoration = DividerItemDecoration(this, manager.orientation)
         binding.RecyclerView.addItemDecoration(decoration)
+
+    }
+
+    private fun showSimpleAlertDialog() {
+        AlertDialog.Builder(ContextThemeWrapper(this,R.style.newAppTheme))
+            .setTitle("Validacion")
+            .setMessage("Contraseña validada")
+            .setPositiveButton("OK") { dialog, which ->
+                if ( binding.txtPassword.text.toString() == "Admin123"){
+                    startActivity(Intent(this, PantallaPrincipal::class.java))
+                } else {
+                    Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
+                }
+            }.setIcon(R.drawable.ic_alert_dialog_validacion)
+            .show()
+
 
     }
 

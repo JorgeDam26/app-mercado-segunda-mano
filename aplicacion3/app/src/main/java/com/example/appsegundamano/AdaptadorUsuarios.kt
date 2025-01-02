@@ -31,7 +31,7 @@ class AdaptadorUsuarios(private val usuarios: MutableList<Usuario>) : RecyclerVi
 
         //Cuando hago click en algo de la lista...
         holder.itemView.setOnClickListener {
-            val nombreUsuario = usuarios[position]
+            val nombreUsuario = usuarios[position].name
 
             if(selectedItems.contains((holder.adapterPosition))){
                 selectedItems.remove(holder.adapterPosition)
