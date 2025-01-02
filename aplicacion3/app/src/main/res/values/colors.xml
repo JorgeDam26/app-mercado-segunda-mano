@@ -4,7 +4,9 @@
 
     <color name="white">#FFFFFFFF</color>
     
-    <color name="listaUsuarios">#BDDECA</color>
+    <color name="listaUsuarios">#EBD0A5</color>
+
+    <color name="item_seleccionado">#E6AC65</color>
 
     <!-- Colores toolbar-->
     <color name="azulTbPantallaPrincipal">#88A2BF</color>

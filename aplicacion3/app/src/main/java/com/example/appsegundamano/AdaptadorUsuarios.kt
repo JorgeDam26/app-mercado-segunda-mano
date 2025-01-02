@@ -1,10 +1,16 @@
 package com.example.appsegundamano
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class AdaptadorUsuarios(private val usuarios: ArrayList<String>) : RecyclerView.Adapter<UsuariosViewHolder>() {
+class AdaptadorUsuarios(private val usuarios: MutableList<Usuario>) : RecyclerView.Adapter<UsuariosViewHolder>() {
+
+    private val selectedItems = mutableSetOf<Int>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UsuariosViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -15,11 +21,33 @@ class AdaptadorUsuarios(private val usuarios: ArrayList<String>) : RecyclerView.
 
         //Inicializamos la lista de los cantantes
         val usuario = usuarios[position]
-        holder.textView.text = usuario
+        holder.textView.text = usuario.name
+
+        val imageResourceId = holder.itemView.context.resources.getIdentifier(
+            usuario.imageName, "drawable", holder.itemView.context.packageName
+        )
+
+        holder.planetaImageView.setImageResource(imageResourceId)
 
         //Cuando hago click en algo de la lista...
-        holder.textView.setOnClickListener {
+        holder.itemView.setOnClickListener {
+            val nombreUsuario = usuarios[position]
 
+            if(selectedItems.contains((holder.adapterPosition))){
+                selectedItems.remove(holder.adapterPosition)
+            } else {
+                selectedItems.add(holder.adapterPosition)
+            }
+            Toast.makeText(holder.itemView.context, "Usuario seleccionado: " + nombreUsuario, Toast.LENGTH_SHORT).show()
+            notifyItemChanged(holder.adapterPosition)
+        }
+
+        //Si está seleccionado cambiamos el color de fondo
+        holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.listaUsuarios))
+        if(selectedItems.contains(position)){
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.item_seleccionado))
+        } else {
+            holder.itemView.setBackgroundColor(ContextCompat.getColor(holder.itemView.context, R.color.listaUsuarios))
         }
 
     }
@@ -27,4 +55,5 @@ class AdaptadorUsuarios(private val usuarios: ArrayList<String>) : RecyclerView.
     override fun getItemCount(): Int {
         return usuarios.size
     }
+
 }

@@ -1,7 +1,9 @@
 package com.example.appsegundamano
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -22,6 +24,15 @@ class Login : AppCompatActivity() {
 
         //Configuramos el RecyclerView
         initRecyclerView()
+
+        binding.btAutentificar.setOnClickListener(){
+            if ( binding.txtPassword.text.toString() == "Admin123"){
+                startActivity(Intent(this, PantallaPrincipal::class.java))
+            } else {
+                Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
+            }
+        }
+
     }
 
     //Inicializamos la lista con los usuarios guardados
@@ -34,4 +45,6 @@ class Login : AppCompatActivity() {
         binding.RecyclerView.addItemDecoration(decoration)
 
     }
+
+
 }
