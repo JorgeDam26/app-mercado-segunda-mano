@@ -5,8 +5,8 @@
     </style>
 
     <style name="newAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="backgroundColor">@color/colorFondoTemaOscuro</item>
-        <item name="fontFamily">bold</item>
+        <item name="android:background">@color/colorFondoTemaOscuro</item>
+        <item name="android:fontFamily">bold</item>
         <item name="android:textColor">@color/colorLetrasTemaOscuro</item>
     </style>
 </resources>
