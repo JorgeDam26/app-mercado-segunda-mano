@@ -26,5 +26,34 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="textoAcercaDe">Application that simulates an application for buying and selling items.</string>
+    <string name="atras">Back</string>
+    <string name="usuarios">Users</string>
+    <string name="autentificar">Authenticate</string>
+    <string name="subtituloTb">Go up, buy, sell</string>
+    <string name="titulotb">VENDIA</string>
+    <string name="popular">Popular</string>
+    <string name="moda">Style</string>
+    <string name="deportes">Sports</string>
+    <string name="tecnologia">Tecnology</string>
+    <string name="pantallaAIr">What screen do you want to go</string>
+    <string name="zapatillasRunning">Running shoes</string>
+    <string name="zapatillasNike">Nike shoes</string>
+    <string name="camisetaRunning">Running t-shirt</string>
+    <string name="zapatillasLiveStile">LiveStile shoes</string>
+    <string name="pantalonChandalHombre">Tracksuit men</string>
+    <string name="sudaderaAzul">Blue sweatshirt</string>
+    <string name="pantalonAnchos">Wide trousers</string>
+    <string name="jerseyMarron">Brown jumper</string>
+    <string name="jerseyVerde">Green jumper</string>
+    <string name="sudaderaRosa">Pink sweatshirt</string>
+    <string name="jerseyPunto">Knitted jersey</string>
+    <string name="coolpcR7">COOLPC R7</string>
+    <string name="portatilEstudio">Laptop</string>
+    <string name="monitor200hz">Monitor 200Hz</string>
+    <string name="portatilGaming">Gaming laptop</string>
+    <string name="monitor180Hz">Monitor 180Hz</string>
+    <string name="foregeonARGB">Foregeon ARGB</string>
+    <string name="TempesRGB">Tempes RGB</string>
 
 </resources>

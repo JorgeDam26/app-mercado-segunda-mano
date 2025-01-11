@@ -18,8 +18,9 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:subtitle="Sube, compra, vende"
-        app:title="VENDIA" />
+        app:subtitle="@string/subtituloTb"
+        app:title="@string/titulotb"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -33,32 +34,32 @@
             android:id="@+id/tbPopular"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Popular" />
+            android:text="@string/popular" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tbModa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Moda" />
+            android:text="@string/moda" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tolBarDeportes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Deportes" />
+            android:text="@string/deportes" />
 
         <com.google.android.material.tabs.TabItem
             android:id="@+id/tbTecnologia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tecnología" />
+            android:text="@string/tecnologia" />
     </com.google.android.material.tabs.TabLayout>
 
     <AutoCompleteTextView
         android:id="@+id/autocompleteTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="A qué pantalla desea ir"
+        android:hint="@string/pantallaAIr"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -26,7 +26,35 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Descargar archivos adjuntos sólo cuando se soliciten manualmente</string>
-
+    <string name="textoAcercaDe">Aplicacion que simula una aplicacion de compre venta de articulos</string>
+    <string name="atras">Atrás</string>
+    <string name="usuarios">Usuarios</string>
+    <string name="autentificar">Autentificar</string>
+    <string name="subtituloTb">Sube, compra, vende</string>
+    <string name="titulotb">VENDIA</string>
+    <string name="popular">Popular</string>
+    <string name="moda">Moda</string>
+    <string name="deportes">Deportes</string>
+    <string name="tecnologia">Tecnologia</string>
+    <string name="pantallaAIr">A qué pantalla desea ir</string>
+    <string name="zapatillasRunning">Zapatillas running</string>
+    <string name="zapatillasNike">Zapatillas nike</string>
+    <string name="camisetaRunning">Camiseta running</string>
+    <string name="zapatillasLiveStile">Zapatillas liveStile</string>
+    <string name="pantalonChandalHombre">Pantalon chandal hombre</string>
+    <string name="sudaderaAzul">Sudadera azul</string>
+    <string name="pantalonAnchos">Pantalon anchos</string>
+    <string name="jerseyMarron">Jersey marron</string>
+    <string name="jerseyVerde">Jersey verde</string>
+    <string name="sudaderaRosa">Pink sweatshirt</string>
+    <string name="jerseyPunto">Jersey punto</string>
+    <string name="coolpcR7">COOLPC R7</string>
+    <string name="portatilEstudio">Portatil</string>
+    <string name="monitor200hz">Monitor 200Hz</string>
+    <string name="portatilGaming">Portatil Gaming</string>
+    <string name="monitor180Hz">Monitor 180Hz</string>
+    <string name="foregeonARGB">Foregeon ARGB</string>
+    <string name="TempesRGB">Tempes RGB</string>
 
 
 </resources>

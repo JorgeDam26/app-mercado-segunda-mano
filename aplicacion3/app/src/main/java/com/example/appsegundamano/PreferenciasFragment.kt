@@ -2,7 +2,9 @@ package com.example.appsegundamano
 
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat.recreate
 import androidx.preference.PreferenceFragmentCompat
@@ -29,9 +31,27 @@ class PreferenciasFragment : PreferenceFragmentCompat(), SharedPreferences.OnSha
         when (key) {
             "prefModoOscuro" -> {
                 val modoOscuroActivado = sharedPreferences?.getBoolean(key, false) ?: false
-                cambiarAModoOscuro(modoOscuroActivado)
+
+                showOkCancelAlertDialog(modoOscuroActivado)
+
             }
         }
+    }
+
+
+    private fun showOkCancelAlertDialog(modoOscuroActivado: Boolean) {
+        AlertDialog.Builder(ContextThemeWrapper(requireContext(), R.style.newAppTheme))
+            .setTitle("Confirmation")
+            .setMessage("¿Estas seguro?")
+            .setPositiveButton("SI") { dialog, which ->
+                // Si pulsas el boton si
+                cambiarAModoOscuro(modoOscuroActivado)
+            }
+            .setNegativeButton("NO") { dialog, which ->
+                // Si pulsas el boton no
+                Toast.makeText(requireContext(), "Cancelado el cambio de tema", Toast.LENGTH_SHORT).show()
+            }
+            .show()
     }
 
     //Este metodo cambia de modo según el parametro pasado (según si está activado el o no el checkbox)

@@ -11,19 +11,21 @@
         android:id="@+id/txUsuarios"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Aplicacion que simula una aplicacion de compre venta de articulos"
+        android:text="@string/textoAcercaDe"
         android:textAlignment="center"
         android:textSize="48sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnAtras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atras"
+        android:text="@string/atras"
         app:layout_constraintBottom_toBottomOf="@+id/txUsuarios"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

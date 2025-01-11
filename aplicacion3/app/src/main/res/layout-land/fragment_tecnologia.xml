@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
         android:layout_marginBottom="1dp"
-        android:text="Portatil estudio"
+        android:text="@string/portatilEstudio"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil1"
         app:layout_constraintStart_toStartOf="parent" />
@@ -141,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="568dp"
-        android:text="Monitor 200Hz"
+        android:text="@string/monitor200hz"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor1"
         app:layout_constraintStart_toStartOf="parent" />
@@ -172,7 +172,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="63dp"
         android:layout_marginBottom="2dp"
-        android:text="Portatil Gaming"
+        android:text="@string/portatilGaming"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil2"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -182,7 +182,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="620dp"
-        android:text="Monitor 180Hz"
+        android:text="@string/monitor180Hz"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor2"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -203,7 +203,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="182dp"
         android:layout_marginBottom="2dp"
-        android:text="Foregeon ARGB"
+        android:text="@string/foregeonARGB"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioTorre2"
         app:layout_constraintEnd_toStartOf="@+id/txtViewMonitor1" />
@@ -214,7 +214,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="190dp"
-        android:text="Tempes RGB"
+        android:text="@string/foregeonARGB"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioTorre1"
         app:layout_constraintEnd_toStartOf="@+id/txtViewPrecioTorre2"

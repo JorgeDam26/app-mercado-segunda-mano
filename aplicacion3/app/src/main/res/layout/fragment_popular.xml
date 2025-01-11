@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:title="POPULAR"
+        app:title="@string/popular"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextColor="@color/letraTbPrincipal" />
 
@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Sudadera Azul"
+        android:text="@string/sudaderaAzul"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular1"
         app:layout_constraintEnd_toStartOf="@+id/txtViewPrecioPopular1"
         app:layout_constraintHorizontal_bias="0.0"
@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Pantalon Ancho"
+        android:text="@string/pantalonAnchos"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular3"
         app:layout_constraintEnd_toStartOf="@+id/txtViewPopular4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -115,7 +115,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="52dp"
-        android:text="Camiseta Running"
+        android:text="@string/camisetaRunning"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular6"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -135,7 +135,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Zapatillas Running"
+        android:text="@string/zapatillasRunning"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular5"
         app:layout_constraintEnd_toStartOf="@+id/txtViewInfoPopular6"
         app:layout_constraintHorizontal_bias="0.0"
@@ -171,7 +171,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="92dp"
         android:layout_marginBottom="1dp"
-        android:text="COOLPC R7"
+        android:text="@string/coolpcR7"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular2"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -213,7 +213,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="116dp"
         android:layout_marginBottom="1dp"
-        android:text="Jersey3"
+        android:text="@string/jerseyPunto"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecioPopular4"
         app:layout_constraintEnd_toEndOf="parent" />
 

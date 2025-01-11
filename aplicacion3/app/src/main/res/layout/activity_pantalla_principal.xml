@@ -22,8 +22,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:subtitle="Sube, compra, vende"
-        app:title="VENDIA"
+        app:subtitle="@string/subtituloTb"
+        app:title="@string/titulotb"
         />
 
     <com.google.android.material.tabs.TabLayout
@@ -78,11 +78,11 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        android:completionHint="A que pantalla desea ir"
+        android:completionHint="@string/pantallaAIr"
         android:completionThreshold="1"
         android:dropDownWidth="match_parent"
         android:dropDownHeight="wrap_content"
-        android:hint="A que pantalla desea ir"
+        android:hint="@string/pantallaAIr"
         app:layout_constraintBottom_toTopOf="@+id/viewPager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -23,7 +23,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:title="DEPORTE"
+        app:title="@string/deportes"
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextColor="#FFFFFF" />
 
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="264dp"
         android:layout_marginBottom="1dp"
-        android:text="Zapatillas Running"
+        android:text="@string/zapatillasRunning"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioZapatillas1"
         app:layout_constraintStart_toStartOf="parent" />
@@ -145,7 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Zapatillas Nike"
+        android:text="@string/zapatillasNike"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil1"
         app:layout_constraintStart_toStartOf="parent" />
@@ -176,7 +176,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="70dp"
         android:layout_marginBottom="2dp"
-        android:text="Camiseta Running"
+        android:text="@string/camisetaRunning"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil2"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -186,7 +186,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
-        android:text="Zapatillas LiveStile"
+        android:text="@string/zapatillasLiveStile"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor2"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -206,7 +206,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="116dp"
-        android:text="Pantalon Chandal Hombre"
+        android:text="@string/pantalonChandalHombre"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/textViewPrecioTorre2"
         app:layout_constraintEnd_toStartOf="@+id/txtViewZapatillas2" />
@@ -217,7 +217,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginBottom="1dp"
-        android:text="Pantalon Chandal Hombre"
+        android:text="@string/pantalonChandalHombre"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioTorre1"
         app:layout_constraintEnd_toStartOf="@+id/txtViewPortatil2"

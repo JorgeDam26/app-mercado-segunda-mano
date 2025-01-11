@@ -6,7 +6,7 @@
 
     <style name="newAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:background">@color/colorFondoTemaClaro</item>
-        <item name="android:fontFamily">italic</item>
+        <item name="android:fontFamily">sans-serif</item>
         <item name="android:textColor">@color/colorLetrasTemaClaro</item>
     </style>
 

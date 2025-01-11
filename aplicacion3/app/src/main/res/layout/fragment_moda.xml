@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Sudadera Azul"
+        android:text="@string/sudaderaAzul"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioSudadera1"
         app:layout_constraintEnd_toStartOf="@+id/txtViewSudadera2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Pantalon Ancho"
+        android:text="@string/pantalonAnchos"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular3"
         app:layout_constraintEnd_toStartOf="@+id/txtViewPopular4"
         app:layout_constraintHorizontal_bias="0.0"
@@ -113,7 +113,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
-        android:text="JeseyMarron"
+        android:text="@string/jerseyMarron"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular6"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -133,7 +133,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="1dp"
-        android:text="Jersey Verde"
+        android:text="@string/jerseyVerde"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioPopular5"
         app:layout_constraintEnd_toStartOf="@+id/txtViewInfoPopular6"
         app:layout_constraintHorizontal_bias="0.0"
@@ -169,7 +169,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="1dp"
-        android:text="Sudadera Rosa"
+        android:text="@string/sudaderaRosa"
         app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioSudadera2"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -212,7 +212,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="1dp"
-        android:text="Jersey Punto"
+        android:text="@string/jerseyPunto"
         app:layout_constraintBottom_toTopOf="@+id/txtPrecioPopular4"
         app:layout_constraintEnd_toEndOf="parent" />
 
