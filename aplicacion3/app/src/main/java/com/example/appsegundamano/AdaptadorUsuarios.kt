@@ -1,10 +1,8 @@
 package com.example.appsegundamano
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
@@ -21,17 +19,17 @@ class AdaptadorUsuarios(private val usuarios: MutableList<Usuario>) : RecyclerVi
 
         //Inicializamos la lista de los cantantes
         val usuario = usuarios[position]
-        holder.textView.text = usuario.name
+        holder.textView.text = usuario.nombre
 
         val imageResourceId = holder.itemView.context.resources.getIdentifier(
-            usuario.imageName, "drawable", holder.itemView.context.packageName
+            usuario.urlImagen, "drawable", holder.itemView.context.packageName
         )
 
         holder.planetaImageView.setImageResource(imageResourceId)
 
         //Cuando hago click en algo de la lista...
         holder.itemView.setOnClickListener {
-            val nombreUsuario = usuarios[position].name
+            val nombreUsuario = usuarios[position].nombre
 
             if(selectedItems.contains((holder.adapterPosition))){
                 selectedItems.remove(holder.adapterPosition)
