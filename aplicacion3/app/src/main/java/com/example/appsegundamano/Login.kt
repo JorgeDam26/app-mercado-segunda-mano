@@ -19,6 +19,8 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.
+
         //Configuramos el RecyclerView
         initRecyclerView()
 

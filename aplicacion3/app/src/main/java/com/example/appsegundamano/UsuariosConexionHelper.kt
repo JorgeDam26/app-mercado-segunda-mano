@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 object UsuariosConexionHelper {
 
+    /*
     /**
      * Añado un usuario a la base de datos
      */
     fun addUsuario(contexto: AppCompatActivity, u: Usuario):Long{
 
         //Creo una instancia para poder conectarme a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -34,15 +35,17 @@ object UsuariosConexionHelper {
         //Devuelvo el id de la fila insertada o -1 en caso de error
         return idFilaInsertada
     }
+    */
 
 
+    /*
     /**
      * Borras un usuario de la bbdd
      */
     fun  borrarUsuario(contexto: AppCompatActivity, id:Int):Int{
 
         //Creo una instancia para poder conectarme a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -57,15 +60,15 @@ object UsuariosConexionHelper {
         //Devuelvo el numero de filas afectadas
         return cantFilasAfectadas
     }
-
-
+*/
+    /*
     /**
      * Modificas un usuario de la bbdd
      */
     fun modificarUsuario(contexto: AppCompatActivity, id:Int, u:Usuario):Int{
 
         //Creo la instancia a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -86,8 +89,9 @@ object UsuariosConexionHelper {
         //Devuelvo el numero de filas afectadas
         return numeroFilasAfectadas
     }
+    */
 
-
+    /*
     /**
      * Buscar el usuario que tenga el id pasado por parametro
      */
@@ -97,7 +101,7 @@ object UsuariosConexionHelper {
         var u:Usuario? = null
 
         //Creo la instancia
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito que solo pueda leer
         val bd: SQLiteDatabase = admin.readableDatabase
@@ -116,7 +120,7 @@ object UsuariosConexionHelper {
         bd.close()
         return u
     }
-
+*/
 
     /**
      * Te devuelve todos los usuarios de la bbdd
@@ -127,7 +131,7 @@ object UsuariosConexionHelper {
         var usuarios:ArrayList<Usuario> = ArrayList(1)
 
         //Abres la conexion en la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permisos de solo lectura
         val bd: SQLiteDatabase = admin.readableDatabase

@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 object ProductoConexionHelper {
 
+    /*
     /**
      * Añado un producto a la bbdd
      */
     fun addProducto(contexto: AppCompatActivity, p:Producto):Long{
 
         //Creo una instancia para poder conectarme a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -34,15 +35,16 @@ object ProductoConexionHelper {
         return idFilaInsertada
 
     }
+    */
 
-
+    /*
     /**
      * Borramos un producto de la bbdd
      */
     fun borrarProducto(contexto: AppCompatActivity, id:Int):Int{
 
         //Creo una instancia para poder conectarme a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -57,15 +59,16 @@ object ProductoConexionHelper {
         //Devuelvo el numero de filas afectadas
         return cantFilasAfectadas
     }
+    */
 
-
+    /*
     /**
      * Modificas un usuario de la bbdd
      */
     fun modificarProducto(contexto: AppCompatActivity, id:Int, p:Producto):Int{
 
         //Creo la instancia a la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito modificar la bbdd
         val bd: SQLiteDatabase = admin.writableDatabase
@@ -86,8 +89,9 @@ object ProductoConexionHelper {
         //Devuelvo el numero de filas afectadas
         return numeroFilasAfectadas
     }
+    */
 
-
+    /*
     /**
      * Buscar el producto que tenga el id pasado por parametro
      */
@@ -97,7 +101,7 @@ object ProductoConexionHelper {
         var p:Producto? = null
 
         //Creo la instancia
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permito que solo pueda leer
         val bd: SQLiteDatabase = admin.readableDatabase
@@ -116,6 +120,7 @@ object ProductoConexionHelper {
         bd.close()
         return p
     }
+    */
 
 
     /**
@@ -127,7 +132,7 @@ object ProductoConexionHelper {
         var productos:ArrayList<Producto> = ArrayList(1)
 
         //Abres la conexion en la bbdd
-        val admin = AdminSQLIteConexion(contexto)
+        val admin = AdminSQLiteConexion(contexto)
 
         //Permisos de solo lectura
         val bd: SQLiteDatabase = admin.readableDatabase
@@ -137,7 +142,7 @@ object ProductoConexionHelper {
 
         while (fila.moveToNext()) { //Si fila (ResultSet) tiene mas contenido del leido
             //Creo un producto
-            var p:Producto = Producto( fila.getInt(0), fila.getString(1), fila.getDouble(2), fila.getString(3) )
+            var p:Producto = Producto( fila.getInt(0), fila.getString(1), fila.getDouble(2), fila.getString(3), fila.getString(4) )
             //Lo guardo en la lista
             productos.add(p)
         }
