@@ -25,7 +25,7 @@ class AdaptadorUsuarios(private val usuarios: MutableList<Usuario>) : RecyclerVi
             usuario.urlImagen, "drawable", holder.itemView.context.packageName
         )
 
-        holder.planetaImageView.setImageResource(imageResourceId)
+        holder.img.setImageResource(imageResourceId)
 
         //Cuando hago click en algo de la lista...
         holder.itemView.setOnClickListener {

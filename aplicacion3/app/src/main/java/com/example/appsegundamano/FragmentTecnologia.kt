@@ -5,24 +5,43 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.appsegundamano.databinding.FragmentPopularBinding
+import android.widget.LinearLayout
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.appsegundamano.databinding.FragmentTecnologiaBinding
 
 
 class FragmentTecnologia : Fragment() {
 
+    //Creamos el binding
     private lateinit var binding: FragmentTecnologiaBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        //Creamos la vista en el fragment
+        //Configuramos el RecyclerView
+        binding.rvTecnologia.requestFocus()
+
+        initRecyclerView()
+
         binding = FragmentTecnologiaBinding.inflate(inflater, container, false)
         val view = binding.root
-        return view
 
+        return view
+    }
+
+    private fun  initRecyclerView(){
+
+        val manager = LinearLayout(requireActivity())
+        binding.rvTecnologia.layoutManager = manager
+
+        //Obtengo los datos de la bbdd
+        val productosHelper = ProductoConexionHelper
+        val productosBBDD = productosHelper.obtenerProductosPorCategoria(requireActivity(), "Tecnologia")
+
+        //Configuro el ReciclerView con los datos de la bbdd
+        binding.rvTecnologia.adapter = AdaptadorProductos(productosBBDD)
+
+        val decoration = DividerItemDecoration(requireActivity(), manager.orientation)
+        binding.rvTecnologia.addItemDecoration(decoration)
     }
 
 

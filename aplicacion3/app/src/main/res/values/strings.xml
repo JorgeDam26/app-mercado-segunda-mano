@@ -55,5 +55,7 @@
     <string name="monitor180Hz">Monitor 180Hz</string>
     <string name="foregeonARGB">Foregeon ARGB</string>
     <string name="TempesRGB">Tempes RGB</string>
+    <string name="txtNombreProducto">Here is a product</string>
+    <string name="txtPrecioProducto">Price of product...</string>
 
 </resources>

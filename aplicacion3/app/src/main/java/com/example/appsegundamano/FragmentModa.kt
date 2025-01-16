@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appsegundamano.databinding.FragmentModaBinding
 
 
@@ -14,11 +16,34 @@ class FragmentModa : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+        //Configuramos el RecyclerView
+        binding.rvModa.requestFocus()
+
+        initRecyclerView()
+
         //Creamos la vista en el fragment
         binding = FragmentModaBinding.inflate(inflater, container, false)
         val view = binding.root
+
+        //val productoHelper = ProductoConexionHelper
+        //val productosBBDD = productoHelper.obtenerProductosPorCategoria(requireActivity(), "Deporte")
+
         return view
 
+    }
+
+    private fun initRecyclerView(){
+        val manager = LinearLayoutManager(requireActivity())
+        binding.rvModa.layoutManager = manager
+
+        //Obtengo los datos de la bbdd
+        val productosHelper = ProductoConexionHelper
+        val productosBBDD = productosHelper.obtenerProductosPorCategoria(requireActivity(), "Moda")
+
+        binding.rvModa.adapter = AdaptadorProductos(productosBBDD)
+
+        val decoration = DividerItemDecoration(requireActivity(), manager.orientation)
+        binding.rvModa.addItemDecoration(decoration)
     }
 
 }

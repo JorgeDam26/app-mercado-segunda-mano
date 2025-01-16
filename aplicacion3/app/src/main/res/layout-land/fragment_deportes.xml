@@ -9,7 +9,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tolBarDeportes"
-        android:layout_width="match_parent"
+        android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
@@ -27,201 +27,17 @@
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextColor="#FFFFFF" />
 
-    <ImageView
-        android:id="@+id/imagenPantalon2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="404dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPortatil2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbDeporte"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pantalon2" />
-
-    <ImageView
-        android:id="@+id/imagenZapatillas1"
-        android:layout_width="78dp"
-        android:layout_height="106dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="68dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/zapatillas1" />
-
-    <ImageView
-        android:id="@+id/imagenPortatil2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewInfoCamiseta2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/camiseta1" />
-
-    <TextView
-        android:id="@+id/textViewPrecioPortatil1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="28dp"
-        android:text="69.99€"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-
-    <ImageView
-        android:id="@+id/imagenPantalon1"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDeportes"
+        android:layout_width="409dp"
+        android:layout_height="673dp"
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewTorre2"
-        app:layout_constraintEnd_toStartOf="@+id/imagenPantalon2"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbDeporte"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pantalon1" />
-
-    <TextView
-        android:id="@+id/txtViewPrecioTorre1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="28dp"
-        android:text="44.99€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenPortatil1"
-        app:layout_constraintEnd_toStartOf="@+id/textViewPrecioTorre2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagenPortatil1"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPoratil1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/zapatillas3" />
-
-    <TextView
-        android:id="@+id/textViewPrecioZapatillas1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="28dp"
-        android:text="135.00€"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioPortatil2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="136dp"
-        android:layout_marginBottom="28dp"
-        android:text="69.99€"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewMonitor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
-        android:layout_marginBottom="1dp"
-        android:text="@string/zapatillasRunning"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioZapatillas1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewPoratil1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="1dp"
-        android:text="@string/zapatillasNike"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioTorre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="420dp"
-        android:layout_marginBottom="22dp"
-        android:text="47.99€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenZapatillas1"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagenZapatillas2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewZapatillas2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/zapatillas2" />
-
-    <TextView
-        android:id="@+id/txtViewInfoCamiseta2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="2dp"
-        android:text="@string/camisetaRunning"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewZapatillas2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="68dp"
-        android:text="@string/zapatillasLiveStile"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioMonitor2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="140dp"
-        android:layout_marginBottom="24dp"
-        android:text="69.99€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenPortatil2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewPortatil2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="116dp"
-        android:text="@string/pantalonChandalHombre"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioTorre2"
-        app:layout_constraintEnd_toStartOf="@+id/txtViewZapatillas2" />
-
-    <TextView
-        android:id="@+id/txtViewTorre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="1dp"
-        android:text="@string/pantalonChandalHombre"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioTorre1"
-        app:layout_constraintEnd_toStartOf="@+id/txtViewPortatil2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tolBarDeportes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

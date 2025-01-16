@@ -9,8 +9,8 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tbTecnologia"
-        android:layout_width="731dp"
-        android:layout_height="63dp"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:background="@color/azulTbFragment"
@@ -27,197 +27,16 @@
         app:titleTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:titleTextColor="#FFFFFF" />
 
-    <ImageView
-        android:id="@+id/imagenTorre2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="380dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewTorre2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbTecnologia"
-        app:srcCompat="@drawable/torre2" />
-
-    <ImageView
-        android:id="@+id/imagenMonitor1"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="103dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="673dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewMonitor1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbTecnologia"
-        app:srcCompat="@drawable/monitor1" />
-
-    <ImageView
-        android:id="@+id/imagenPortatil2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewInfoPortatil2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/portatil2" />
-
-    <ImageView
-        android:id="@+id/imagenTorre1"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewInfoTorre1"
-        app:layout_constraintEnd_toStartOf="@+id/imagenTorre2"
-        app:layout_constraintHorizontal_bias="0.018"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tbTecnologia"
-        app:layout_constraintVertical_bias="0.666"
-        app:srcCompat="@drawable/torre1" />
-
-    <TextView
-        android:id="@+id/txtViewPrecioTorre1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="27dp"
-        android:text="1500.00€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenMonitor2"
-        app:layout_constraintEnd_toStartOf="@+id/textViewPrecioTorre2"
-        app:layout_constraintHorizontal_bias="0.017"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imagenPortatil1"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="211dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPoratil1"
-        app:layout_constraintEnd_toStartOf="@+id/imagenPortatil2"
-        app:srcCompat="@drawable/portatil1" />
-
-    <TextView
-        android:id="@+id/txtViewPoratil1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginBottom="1dp"
-        android:text="@string/portatilEstudio"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioPortatil1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="300dp"
-        android:layout_marginBottom="16dp"
-        android:text="400.00€"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioMonitor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="111dp"
-        android:layout_marginBottom="28dp"
-        android:text="200.00€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenPortatil2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioPortatil2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="16dp"
-        android:text="1000.00€"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewMonitor1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="568dp"
-        android:text="@string/monitor200hz"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor1"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioTorre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="221dp"
-        android:layout_marginBottom="28dp"
-        android:text="1200.67€"
-        app:layout_constraintBottom_toTopOf="@+id/imagenPortatil1"
-        app:layout_constraintEnd_toStartOf="@+id/textViewPrecioMonitor1" />
-
-    <ImageView
-        android:id="@+id/imagenMonitor2"
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="652dp"
-        android:layout_marginBottom="2dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewMonitor2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/monitor2" />
-
-    <TextView
-        android:id="@+id/txtViewInfoPortatil2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="63dp"
-        android:layout_marginBottom="2dp"
-        android:text="@string/portatilGaming"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioPortatil2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txtViewMonitor2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="620dp"
-        android:text="@string/monitor180Hz"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioMonitor2"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewPrecioMonitor2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="229dp"
-        android:layout_marginBottom="16dp"
-        android:text="170.00€"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewPrecioPortatil1" />
-
-    <TextView
-        android:id="@+id/txtViewPrecioTorre2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="182dp"
-        android:layout_marginBottom="2dp"
-        android:text="@string/foregeonARGB"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewPrecioTorre2"
-        app:layout_constraintEnd_toStartOf="@+id/txtViewMonitor1" />
-
-    <TextView
-        android:id="@+id/txtViewInfoTorre1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="190dp"
-        android:text="@string/foregeonARGB"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtViewPrecioTorre1"
-        app:layout_constraintEnd_toStartOf="@+id/txtViewPrecioTorre2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tbTecnologia" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

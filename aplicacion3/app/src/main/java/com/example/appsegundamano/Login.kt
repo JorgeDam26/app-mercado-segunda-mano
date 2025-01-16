@@ -3,6 +3,7 @@ package com.example.appsegundamano
 import android.content.Intent
 import android.os.Bundle
 import android.view.ContextThemeWrapper
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -19,22 +20,28 @@ class Login : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.
 
         //Configuramos el RecyclerView
+        binding.RecyclerView.requestFocus()
         initRecyclerView()
 
-        binding.btAutentificar.setOnClickListener(){
+        binding.btAutentificar.setOnClickListener() {
             showSimpleAlertDialog()
         }
 
     }
 
     //Inicializamos la lista con los usuarios guardados
-    private fun initRecyclerView(){
+    private fun initRecyclerView() {
         val manager = LinearLayoutManager(this)
         binding.RecyclerView.layoutManager = manager
-        binding.RecyclerView.adapter = AdaptadorUsuarios(UsuariosProvider.usuariosList)
+
+        //Obtengo los datos de la bbdd
+        val usuariosHelper = UsuariosConexionHelper
+        val usuariosBBDD = usuariosHelper.obtenerUsuarios(this)
+
+        //Configuro el recicler view con los datos de la bbdd
+        binding.RecyclerView.adapter = AdaptadorUsuarios(usuariosBBDD)
 
         val decoration = DividerItemDecoration(this, manager.orientation)
         binding.RecyclerView.addItemDecoration(decoration)
@@ -46,7 +53,7 @@ class Login : AppCompatActivity() {
             .setTitle("Validacion")
             .setMessage("Contraseña validada")
             .setPositiveButton("OK") { dialog, which ->
-                if ( binding.txtPassword.text.toString() == "Admin123"){
+                if (binding.txtPassword.text.toString() == "Admin123") {
                     startActivity(Intent(this, PantallaPrincipal::class.java))
                 } else {
                     Toast.makeText(this, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
@@ -59,3 +66,22 @@ class Login : AppCompatActivity() {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
